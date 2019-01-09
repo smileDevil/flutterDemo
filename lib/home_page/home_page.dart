@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage>{
           ],
         ),
         body: ProductList(
-
+          products: List.generate(20, (i)=>Product('商品$i','编号为$i')),
         )
       )
     );
@@ -42,7 +42,18 @@ ProductList({Key key, @required this.products}):super(key:key);
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: null,
+      child: ListView.builder(
+        itemCount: products.length,
+        itemBuilder: (context,index){
+          return ListTile(
+            title:  Text(products[index].title),
+            subtitle: Text(products[index].descripton),
+            onTap: (){
+              
+            },
+          );
+        },
+      ),
     );
   }
 }
