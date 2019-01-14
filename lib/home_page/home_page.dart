@@ -7,13 +7,10 @@ class HomePage extends StatefulWidget{
 class Product {
    final String title; // 商品标题
    final String descripton;//描述
-
    Product(this.title,this.descripton);
-
 }
 
 class _HomePageState extends State<HomePage>{
-  
   @override
   Widget build(BuildContext context){
     return new MaterialApp(
@@ -33,7 +30,6 @@ class _HomePageState extends State<HomePage>{
 
 }
 
-
 class ProductList extends StatelessWidget {
 final List<Product> products;
 
@@ -48,18 +44,26 @@ ProductList({Key key, @required this.products}):super(key:key);
           return ListTile(
             title:  Text(products[index].title),
             subtitle: Text(products[index].descripton),
-            onTap: (){
-              Navigator.push(
-                context, 
-                MaterialPageRoute(
-                  builder: (context) => ProductDetail(product:products[index])
-                )
-              );
-            },
+            onTap: (){_navigateToDetail(context,products[index]);},
+            // onTap: (){
+            //   Navigator.push(
+            //     context, 
+            //     MaterialPageRoute(
+            //       builder: (context) => ProductDetail(product:products[index])
+            //     )
+            //   );
+            // },
           );
         },
       ),
     );
+  }
+
+  _navigateToDetail(BuildContext context,Product passProduct) async{ //一异步方法
+    final result = await Navigator.push(context,  MaterialPageRoute(
+                  builder: (context) => ProductDetail(product:passProduct)
+                ));
+                Scaffold.of(context).showSnackBar(SnackBar(content:Text('$result'),duration: Duration(seconds: 2)));
   }
 }
 
@@ -71,7 +75,13 @@ class ProductDetail extends StatelessWidget {
     return  Scaffold(
         appBar: AppBar(title: Text('${product.title}'),),
         body: Center(
-         child:  Text('${product.descripton}')
+         child: RaisedButton(
+           onPressed: (){
+            Navigator.pop(context,'测试返回数据');
+           },
+           child: Text('${product.descripton}'),
+         )
+
         ),
         // body: RaisedButton(
         //   onPressed: (){

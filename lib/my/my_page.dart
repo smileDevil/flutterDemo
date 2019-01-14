@@ -13,10 +13,12 @@ class MyPageState extends State<My_page>{
       home: Scaffold(
         appBar: AppBar(title:  Text("我的"),
         actions: <Widget>[
-          new Container()
+          new Container(
+            
+          )
         ],),
         body: Center(
-          child: null,
+          child: Image.asset('images/test.jpeg'),
         ),
       ),
     );
