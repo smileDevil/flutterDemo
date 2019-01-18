@@ -77,7 +77,7 @@ class ProductDetail extends StatelessWidget {
         body: Center(
          child: RaisedButton(
            onPressed: (){
-            Navigator.pop(context,'测试返回数据');
+            Navigator.pop(context,'111');
            },
            child: Text('${product.descripton}'),
          )
