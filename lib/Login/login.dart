@@ -54,6 +54,25 @@ class _loginpageState extends State<LoginPage>{
                  ),
                  ),
 
+                 Container(
+                   width: 360.0,
+                   margin: EdgeInsets.fromLTRB(10, 40, 10, 0),
+                   padding: EdgeInsets.fromLTRB(leftRightPadding,topBottomPadding,leftRightPadding,topBottomPadding),
+                   child: Card(
+                     color: Colors.green,
+                     elevation: 6.0,
+                     child: FlatButton(
+                      onPressed: (){
+                        print("this pass is " + _userNameController.text);
+                      },
+                      child: Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text("马上登陆",
+                        style:TextStyle(color:Colors.white,fontSize:16)),
+                      ),
+                     ),
+                   ),
+                 ),
            ],
         ),
       );
