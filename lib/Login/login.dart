@@ -5,11 +5,11 @@ class LoginPage extends StatefulWidget{
   @override
     State<StatefulWidget> createState() {
      
-      return new _loginpageState();
+      return new _LoginpageState();
     }
 }
 
-class _loginpageState extends State<LoginPage>{
+class _LoginpageState extends State<LoginPage>{
 
    var leftRightPadding = 30.0;
    var topBottomPadding = 4.0;
@@ -72,6 +72,7 @@ class _loginpageState extends State<LoginPage>{
                       ),
                      ),
                    ),
+
                  ),
            ],
         ),

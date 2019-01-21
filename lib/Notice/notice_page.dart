@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Notice_page extends StatefulWidget{
+class Noticepage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() => new _NoticePage();
 }
 
 
-class _NoticePage extends State<Notice_page>{
+class _NoticePage extends State<Noticepage>{
   @override
   Widget build(BuildContext context) {
   

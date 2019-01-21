@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-  class Idea_page extends StatefulWidget{
+  class Ideapage extends StatefulWidget{
    State<StatefulWidget> createState() => new _IdeaPageState();
   }
 
-  class _IdeaPageState extends State<Idea_page>{
+  class _IdeaPageState extends State<Ideapage>{
     @override
   Widget build(BuildContext context) {
     return MaterialApp(

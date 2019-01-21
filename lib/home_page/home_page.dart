@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Login/login.dart';
 class HomePage extends StatefulWidget{
  @override
    State<StatefulWidget> createState() => new _HomePageState();
@@ -17,8 +18,15 @@ class _HomePageState extends State<HomePage>{
       home: new Scaffold(
         appBar:new AppBar(
           title:  new Text("首页"),
+          leading: IconButton(icon: Icon(Icons.menu),
+            onPressed: (){},
+          ),
           actions: <Widget>[
-            new Container()
+            IconButton(icon: Icon(Icons.menu),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+              },
+            ),
           ],
         ),
         body: ProductList(

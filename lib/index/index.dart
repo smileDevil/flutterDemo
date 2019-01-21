@@ -50,10 +50,10 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
       // 将我们 bottomBar 上面的按钮图标对应的页面存放起来，方便我们在点击的时候
       _pageList = <StatefulWidget>[
         new HomePage(),
-        new Idea_page(),
-        new Market_page(),
-        new Notice_page(),
-        new My_page(),
+        new Ideapage(),
+        new Marketpage(),
+        new Noticepage(),
+        new Mypage(),
       ];
       _currentPage = _pageList[_currentIndex];
     }

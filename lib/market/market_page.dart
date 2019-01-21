@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Market_page extends StatefulWidget{
+class Marketpage extends StatefulWidget{
 @override
   State<StatefulWidget> createState() => new _MarketPageState();
 }
 
-class _MarketPageState extends State<Market_page>{
+class _MarketPageState extends State<Marketpage>{
   @override
   Widget build(BuildContext context) {
     
