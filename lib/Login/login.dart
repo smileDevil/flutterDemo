@@ -50,7 +50,8 @@ class _LoginpageState extends State<LoginPage>{
                    style: hintTips,
                    controller: _userPassController,
                    decoration: InputDecoration(hintText: "请输入用户密码"),
-
+                    obscureText: true,
+                    keyboardType: TextInputType.number,
                  ),
                  ),
 
@@ -78,4 +79,8 @@ class _LoginpageState extends State<LoginPage>{
         ),
       );
     }
+}
+
+ LoginAction(var username , var password){
+   if(username.)
 }
