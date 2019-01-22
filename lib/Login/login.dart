@@ -84,7 +84,7 @@ class _LoginpageState extends State<LoginPage>{
  _lginAction(String username , String password,BuildContext context){
    if(username.length <=0){
 
-   }
+   }                          
 
    showDialog<Null>(
     context: context, //BuildContext对象
@@ -94,4 +94,6 @@ class _LoginpageState extends State<LoginPage>{
             text: '正在获取详情...',
         );
     });
+
+    Future.delayed(const Duration(seconds: 2),()=>Navigator.pop(context)) ;
 }
