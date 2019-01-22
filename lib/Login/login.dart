@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_app/helps/LoadingDialog.dart';
 class LoginPage extends StatefulWidget{
 
   @override
@@ -64,7 +64,7 @@ class _LoginpageState extends State<LoginPage>{
                      elevation: 6.0,
                      child: FlatButton(
                       onPressed: (){
-                        print("this pass is " + _userNameController.text);
+                        _lginAction("1","2",context);
                       },
                       child: Padding(
                         padding: EdgeInsets.all(10),
@@ -81,6 +81,17 @@ class _LoginpageState extends State<LoginPage>{
     }
 }
 
- LoginAction(var username , var password){
-   if(username.)
+ _lginAction(String username , String password,BuildContext context){
+   if(username.length <=0){
+
+   }
+
+   showDialog<Null>(
+    context: context, //BuildContext对象
+    barrierDismissible: false,
+    builder: (BuildContext context) {
+        return new LoadingDialog( //调用对话框
+            text: '正在获取详情...',
+        );
+    });
 }
