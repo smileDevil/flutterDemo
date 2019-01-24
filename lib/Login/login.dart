@@ -12,6 +12,9 @@ class LoginPage extends StatefulWidget{
 
 class _LoginpageState extends State<LoginPage>{
 
+   bool _phoneState = false;
+   bool _pwdState = false;
+
    var leftRightPadding = 30.0;
    var topBottomPadding = 4.0;
    var textTips = new TextStyle(fontSize: 16.0 ,color:  Colors.black);
@@ -85,10 +88,22 @@ class _LoginpageState extends State<LoginPage>{
         )
       );
     }
+
+
+void _checkPhone(){
+  String username = _userNameController.text;
+  if (username.isNotEmpty && username.trim().length ==11){
+    _phoneState = true;
+  }else{
+    _phoneState = false;
+  }
+}
    
 }
 
+
  _lginAction(String username , String password,BuildContext context){
+
    if(username.length <=0){
       showDialog<Null>(
        context: context,
@@ -109,6 +124,10 @@ class _LoginpageState extends State<LoginPage>{
          ],
        )
      );  
+
+     if(username == "admin" && password == "123456"){
+       
+     }
     
    }     
 
