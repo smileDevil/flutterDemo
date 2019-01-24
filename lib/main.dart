@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_app/index/index.dart';
-
+import 'Login/login.dart';
 
 void main() => runApp(new MyApp());
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget{
     // 
     return MaterialApp(
       title: 'demo',
-      home: new Index(),
+      home: new LoginPage(),
     );
   }
 }
