@@ -12,7 +12,13 @@ class LoginPage extends StatefulWidget{
 
 class _LoginpageState extends State<LoginPage>{
 
+<<<<<<< HEAD
    bool _phoneState ,_pwdState = false;
+=======
+   bool _phoneState = false;
+   bool _pwdState = false;
+
+>>>>>>> 51881d48740a8091f0e100c2041bcdc5445267ec
    var leftRightPadding = 30.0;
    var topBottomPadding = 4.0;
    var textTips = new TextStyle(fontSize: 16.0 ,color:  Colors.black);
@@ -87,6 +93,7 @@ class _LoginpageState extends State<LoginPage>{
       );
     }
 
+<<<<<<< HEAD
     //账号检查
     void _checkPhone(){
       if(_userNameController.text.isNotEmpty&&_userNameController.text.length<=0){
@@ -104,12 +111,30 @@ class _LoginpageState extends State<LoginPage>{
         _pwdState = false;
       }
     }
+=======
+
+void _checkPhone(){
+  String username = _userNameController.text;
+  if (username.isNotEmpty && username.trim().length ==11){
+    _phoneState = true;
+  }else{
+    _phoneState = false;
+  }
+}
+   
+>>>>>>> 51881d48740a8091f0e100c2041bcdc5445267ec
 }
 
+
  _lginAction(String username , String password,BuildContext context){
+<<<<<<< HEAD
   
   
    if(username.length <=0||password.length <=0||username !="admin" || password != "123456"){
+=======
+
+   if(username.length <=0){
+>>>>>>> 51881d48740a8091f0e100c2041bcdc5445267ec
       showDialog<Null>(
        context: context,
        barrierDismissible: false,
@@ -130,6 +155,10 @@ class _LoginpageState extends State<LoginPage>{
          ],
        )
      );  
+
+     if(username == "admin" && password == "123456"){
+       
+     }
     
    } else{
         Navigator.pushAndRemoveUntil(
