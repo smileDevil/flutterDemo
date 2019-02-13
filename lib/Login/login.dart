@@ -12,13 +12,7 @@ class LoginPage extends StatefulWidget{
 
 class _LoginpageState extends State<LoginPage>{
 
-<<<<<<< HEAD
-   bool _phoneState ,_pwdState = false;
-=======
-   bool _phoneState = false;
-   bool _pwdState = false;
-
->>>>>>> 51881d48740a8091f0e100c2041bcdc5445267ec
+  //  bool _phoneState ,_pwdState = false;
    var leftRightPadding = 30.0;
    var topBottomPadding = 4.0;
    var textTips = new TextStyle(fontSize: 16.0 ,color:  Colors.black);
@@ -93,48 +87,29 @@ class _LoginpageState extends State<LoginPage>{
       );
     }
 
-<<<<<<< HEAD
-    //账号检查
-    void _checkPhone(){
-      if(_userNameController.text.isNotEmpty&&_userNameController.text.length<=0){
-        _phoneState = true;
-      }
-      else{
-        _phoneState = false;
-      }
-    }
+    // //账号检查
+    // void _checkPhone(){
+    //   if(_userNameController.text.isNotEmpty&&_userNameController.text.length<=0){
+    //     _phoneState = true;
+    //   }
+    //   else{
+    //     _phoneState = false;
+    //   }
+    // }
 
-    void _checkPwd(){
-      if(_userPassController.text.isNotEmpty && _userPassController.text.trim().length >=6&&_userPassController.text.trim().length <=10){
-        _pwdState = true;
-      }else{
-        _pwdState = false;
-      }
-    }
-=======
-
-void _checkPhone(){
-  String username = _userNameController.text;
-  if (username.isNotEmpty && username.trim().length ==11){
-    _phoneState = true;
-  }else{
-    _phoneState = false;
-  }
+    // void _checkPwd(){
+    //   if(_userPassController.text.isNotEmpty && _userPassController.text.trim().length >=6&&_userPassController.text.trim().length <=10){
+    //     _pwdState = true;
+    //   }else{
+    //     _pwdState = false;
+    //   }
+    // }
 }
-   
->>>>>>> 51881d48740a8091f0e100c2041bcdc5445267ec
-}
-
 
  _lginAction(String username , String password,BuildContext context){
-<<<<<<< HEAD
   
   
    if(username.length <=0||password.length <=0||username !="admin" || password != "123456"){
-=======
-
-   if(username.length <=0){
->>>>>>> 51881d48740a8091f0e100c2041bcdc5445267ec
       showDialog<Null>(
        context: context,
        barrierDismissible: false,
@@ -144,7 +119,6 @@ void _checkPhone(){
            fontSize: 18,
          )),
          content: Text("用户名为空"),
-         
          actions: <Widget>[
            FlatButton(
              onPressed: (){
@@ -155,16 +129,12 @@ void _checkPhone(){
          ],
        )
      );  
-
-     if(username == "admin" && password == "123456"){
-       
-     }
     
    } else{
         Navigator.pushAndRemoveUntil(
-    context,
-    MaterialPageRoute(builder: (BuildContext context) => Index()),
-    ModalRoute.withName('/'),
+       context,
+       MaterialPageRoute(builder: (BuildContext context) => Index()),
+       ModalRoute.withName('/'),
   );
    }  
 

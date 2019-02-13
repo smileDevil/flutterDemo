@@ -80,6 +80,30 @@ ProductList({Key key, @required this.products}):super(key:key);
   }
 }
 
+
+  //创建数组
+  List<String> strItems = <String>[
+    '图标 -> keyboard', '图标 -> print',
+    '图标 -> router', '图标 -> pages',
+    '图标 -> zoom_out_map', '图标 -> zoom_out',
+    '图标 -> youtube_searched_for', '图标 -> wifi_tethering',
+    '图标 -> wifi_lock', '图标 -> widgets',
+    '图标 -> weekend', '图标 -> web',
+    '图标 -> accessible', '图标 -> ac_unit',
+];
+
+List<Icon> iconItems = <Icon>[
+    new Icon(Icons.keyboard), new Icon(Icons.print),
+    new Icon(Icons.router), new Icon(Icons.pages),
+    new Icon(Icons.zoom_out_map), new Icon(Icons.zoom_out),
+    new Icon(Icons.youtube_searched_for), new Icon(Icons.wifi_tethering),
+    new Icon(Icons.wifi_lock), new Icon(Icons.widgets),
+    new Icon(Icons.weekend), new Icon(Icons.web),
+    new Icon(Icons.accessible), new Icon(Icons.ac_unit),
+];
+
+
+
 //创建详情页
 class ProductDetail extends StatelessWidget {
   final Product product;
@@ -105,30 +129,5 @@ class ProductDetail extends StatelessWidget {
         // ),
       );
   }
-
-  //创建数组
-  List<String> strItems = <String>[
-    '图标 -> keyboard', '图标 -> print',
-    '图标 -> router', '图标 -> pages',
-    '图标 -> zoom_out_map', '图标 -> zoom_out',
-    '图标 -> youtube_searched_for', '图标 -> wifi_tethering',
-    '图标 -> wifi_lock', '图标 -> widgets',
-    '图标 -> weekend', '图标 -> web',
-    '图标 -> accessible', '图标 -> ac_unit',
-];
-
-List<Icon> iconItems = <Icon>[
-    new Icon(Icons.keyboard), new Icon(Icons.print),
-    new Icon(Icons.router), new Icon(Icons.pages),
-    new Icon(Icons.zoom_out_map), new Icon(Icons.zoom_out),
-    new Icon(Icons.youtube_searched_for), new Icon(Icons.wifi_tethering),
-    new Icon(Icons.wifi_lock), new Icon(Icons.widgets),
-    new Icon(Icons.weekend), new Icon(Icons.web),
-    new Icon(Icons.accessible), new Icon(Icons.ac_unit),
-];
-
-
-
- 
 
 }

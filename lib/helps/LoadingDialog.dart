@@ -12,12 +12,12 @@ class LoadingDialog extends Dialog{
   @override
     Widget build(BuildContext context) {
      
-     _dismissDialog(){
-       if(dismissCallback !=null){
-         dismissCallback();
-       }
-       Navigator.of(context).pop();
-     }
+    //  _dismissDialog(){
+    //    if(dismissCallback !=null){
+    //      dismissCallback();
+    //    }
+    //    Navigator.of(context).pop();
+    //  }
       return Material( //创建透明层
         type: MaterialType.transparency,//透明类型
         child: Center(
