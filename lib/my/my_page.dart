@@ -8,65 +8,58 @@ class Mypage extends StatefulWidget{
 class MyPageState extends State<Mypage>{
   @override
   Widget build(BuildContext context) {
-   
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title:  Text("我的"),
-        actions: <Widget>[
-          new Container(
+    return  _showCustomScrollView();
+    // return MaterialApp(
+    //   home: Scaffold(
+    //     appBar: AppBar(title:  Text("我的"),
+    //     actions: <Widget>[
+    //       new Container(
             
-          )
-        ],),
-        body: _showCustomScrollView(),
-        // body: Center(
-        //   child: Image.asset('images/test.jpeg'),
-        // ),
-      ),
-    );
+    //       )
+    //     ],
+        
+    //     ),
+    //     body: _showCustomScrollView(),
+    //     // body: Center(
+    //     //   child: Image.asset('images/test.jpeg'),
+    //     // ),
+    //   ),
+    // );
   }
 
-  _showCustomScrollView() {
-  return new CustomScrollView(
-    slivers: <Widget>[
-      const SliverAppBar(
-        pinned: true,
-        expandedHeight: 250.0,
-        flexibleSpace: const FlexibleSpaceBar(
-          title: const Text('Demo'),
-        ),
-      ),
-      new SliverGrid(
-        gridDelegate: new SliverGridDelegateWithMaxCrossAxisExtent(
-          maxCrossAxisExtent: 200.0,
-          mainAxisSpacing: 10.0,
-          crossAxisSpacing: 10.0,
-          childAspectRatio: 4.0,
-        ),
-        delegate: new SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-            return new Container(
-              alignment: Alignment.center,
-              color: Colors.teal[100 * (index % 9)],
-              child: new Text('grid item $index'),
-            );
-          },
-          childCount: 20,
-        ),
-      ),
-      new SliverFixedExtentList(
-        itemExtent: 50.0,
-        delegate: new SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-            return new Container(
-              alignment: Alignment.center,
-              color: Colors.lightBlue[100 * (index % 9)],
-              child: new Text('list item $index'),
-            );
-          },
-        ),
-      ),
-    ],
-  );
-}
+   _showCustomScrollView() {
+     return new CustomScrollView(
+       reverse: false,
+       shrinkWrap: false,
+       slivers: <Widget>[
+         SliverAppBar(
+           title: Text('我的'),
+           pinned: false,
+           backgroundColor: Colors.greenAccent,
+           expandedHeight: 200,
+           iconTheme: IconThemeData(color:Colors.transparent),
+           flexibleSpace: InkWell(
+             onTap: (){
+               debugPrint('test');
+             },
+             child:Column(
+               mainAxisAlignment: MainAxisAlignment.center,
+               children: <Widget>[
+                 new Image.asset('images/unload.png',width: 60,height: 60),
+                 new Container(
+                   margin: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                   child: Text('点击头像登陆',style: TextStyle(
+                     color: Colors.white,fontSize: 16.0
+                   ),),
+                 )
+               ],
+             ),
+           ),
+         ),
+
+       ],
+     );
+
+  }
 
 }
