@@ -70,8 +70,8 @@ class _IndexState extends State<Index> with TickerProviderStateMixin{
         onTap: (int index){
           setState(() {
                   _navigationViews[_currentIndex].controller.reverse();
-                  _currentIndex = index;
                   _navigationViews[_currentIndex].controller.forward();
+                   _currentIndex = index;
                   _currentPage = _pageList[_currentIndex];    
                     });
         },
